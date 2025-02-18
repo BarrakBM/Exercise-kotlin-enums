@@ -17,9 +17,13 @@ fun main(){
         }
     }
 
-
     taskAccess(UserRole.ADMIN)
     taskAccess(UserRole.VIEWER)
     taskAccess(UserRole.EDITOR)
+
+    // iterate over all roles
+    for (role in UserRole.values()){
+        println("Role: ${role.name}, Access leve: ${role.accessLevel}")
+    }
 
 }
